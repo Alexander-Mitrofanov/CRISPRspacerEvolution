@@ -95,6 +95,7 @@ def run_crispr_identify(args):
     """
 
     cur_path = str(pathlib.Path().absolute())
+    # WHY do you ignore the "--result_folder" argument?!?
     dirname_identify = cur_path + '/tmp/output-CRISPRidentify'
 
     result = os.system('python3.7 CRISPRidentify.py --file ' + args.fasta_file +
