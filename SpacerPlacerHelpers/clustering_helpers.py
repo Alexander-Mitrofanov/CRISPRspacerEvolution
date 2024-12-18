@@ -104,13 +104,14 @@ def remap_and_generate_outputs(data, grouped_data, fasta_output, csv_output):
                 old_to_new[old_cluster] = current_index
                 current_index += 1
 
-    # Add the Spacer_Cluster_Index column to the data
+    # Add the Spacer_Cluster_Index column to the data and remove the Cluster column
     for row in data:
         row['Spacer_Cluster_Index'] = old_to_new[int(row['Cluster'])]
+        del row['Cluster']  # Remove the Cluster column
 
     # Write the updated CSV file
     with open(csv_output, mode='w', newline='') as outfile:
-        fieldnames = list(data[0].keys())
+        fieldnames = list(data[0].keys())  # Get updated field names after removing 'Cluster'
         csv_writer = csv.DictWriter(outfile, fieldnames=fieldnames)
         csv_writer.writeheader()
         csv_writer.writerows(data)
@@ -187,11 +188,9 @@ def fasta_to_csv(fasta_file_path, output_csv_path):
             "Cas-Gene"
         ])
 
-        for row in rows:
-            print(row)
         writer.writeheader()
         writer.writerows(rows)
-
+8
 
 
 
