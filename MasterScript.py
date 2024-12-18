@@ -97,7 +97,7 @@ def run_crispr_identify(args):
     cur_path = str(pathlib.Path().absolute())
     dirname_identify = cur_path + '/tmp/output-CRISPRidentify'
 
-    result = os.system('python3.7 CRISPRidentify/CRISPRidentify.py --file ' + args.fasta_file +
+    result = os.system('python3.7 CRISPRidentify.py --file ' + args.fasta_file +
               ' --model ' + args.model +
               ' --result_folder ' + dirname_identify +
               ' --strand ' + str(args.strand) +
