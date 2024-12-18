@@ -1,4 +1,6 @@
 import csv
+import os
+import csv
 from collections import defaultdict
 import Levenshtein
 
@@ -134,6 +136,63 @@ def remap_and_generate_outputs(data, grouped_data, fasta_output, csv_output):
 
     print(f"FASTA file saved to {fasta_output}")
     print(f"Updated CSV file saved to {csv_output}")
+
+
+def fasta_to_csv(fasta_file_path, output_csv_path):
+    """
+    Converts a FASTA file to its original CSV format.
+
+    Parameters:
+    - fasta_file_path (str): Path to the input FASTA file.
+    - output_csv_path (str): Path to the output CSV file.
+    """
+    # Prepare list to store CSV rows
+    rows = []
+
+    # Parse the FASTA file
+    with open(fasta_file_path, "r") as fasta_file:
+        current_header = None
+        for line in fasta_file:
+            line = line.strip()
+            if line.startswith(">"):
+                # Parse the FASTA header
+                current_header = line[1:]  # Remove the '>'
+                parts = current_header.split("_-_")
+
+                if len(parts) == 6:
+                    accession_number, start, end, category, cas_gene, spacer_index = parts
+                else:
+                    raise ValueError(f"Invalid FASTA header format: {current_header}")
+            else:
+                # Add a row for the CSV
+                rows.append({
+                    "Index": spacer_index,
+                    "Spacer Sequence": line,
+                    "Accession Number": accession_number,
+                    "Start": start,
+                    "End": end,
+                    "Category": category,
+                    "Cas-Gene": cas_gene
+                })
+
+    # Write to CSV
+    with open(output_csv_path, "w", newline="") as csv_file:
+        writer = csv.DictWriter(csv_file, fieldnames=[
+            "Index",
+            "Spacer Sequence",
+            "Accession Number",
+            "Start",
+            "End",
+            "Category",
+            "Cas-Gene"
+        ])
+
+        for row in rows:
+            print(row)
+        writer.writeheader()
+        writer.writerows(rows)
+
+
 
 
 def process_csv_to_fasta(input_csv, fasta_output, csv_output):

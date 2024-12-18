@@ -1,19 +1,12 @@
-import csv
-import sys
 
-from components_spacer_placer.clustering_helpers import process_csv_to_fasta
-def run_spacer_placer(input_file, flag_use_db, flag_cluster_similar):
-    with open(input_file, mode='r') as file:
-        csv_reader = csv.DictReader(file)
+from SpacerPlacerHelpers.clustering_helpers import process_csv_to_fasta
+from SpacerPlacerHelpers.clustering_helpers import fasta_to_csv
+from SpacerPlacerHelpers.execute_spacer_placer import execute_spacer_placer_command
 
-        # Parse the rows
-        data = [row for row in csv_reader]
-
-    if not flag_use_db:
-        process_csv_to_fasta(input_file, "t_input/fasta_for_spacer_placer.fasta", "t_input/csv_for_spacer_placer.csv")
+def run_spacer_placer_tool(input_fasta_file_sp, flag_use_db_sp, flag_cluster_similar_sp, result_folder_sp):
+    fasta_to_csv(input_fasta_file_sp, "tmp_scv_file.csv")
+    process_csv_to_fasta("tmp_scv_file.csv", "fasta_for_spacer_placer.fasta",
+                         "csv_for_spacer_placer.csv")
+    execute_spacer_placer_command("fasta_for_spacer_placer.fasta", result_folder_sp)
 
 
-if __name__ == '__main__':
-    input_file = '/home/alex/GitHub/CRISPRspacerEvolution/CRISPRspacerEvolution/SpacerPlacerHelpers/t_input/CAS-I-C_GTTTCAATCCACGCCCCCCGTCACCGAGGGGCGATGC.csv'
-    flag_use_db = False
-    run_spacer_placer(input_file, False, False )
