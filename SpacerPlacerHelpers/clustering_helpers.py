@@ -104,17 +104,9 @@ def remap_and_generate_outputs(data, grouped_data, fasta_output, csv_output):
                 old_to_new[old_cluster] = current_index
                 current_index += 1
 
-    # Add the Spacer_Cluster_Index column to the data and remove the Cluster column
+    # Add the Spacer_Cluster_Index column to the data
     for row in data:
         row['Spacer_Cluster_Index'] = old_to_new[int(row['Cluster'])]
-        del row['Cluster']  # Remove the Cluster column
-
-    # Write the updated CSV file
-    with open(csv_output, mode='w', newline='') as outfile:
-        fieldnames = list(data[0].keys())  # Get updated field names after removing 'Cluster'
-        csv_writer = csv.DictWriter(outfile, fieldnames=fieldnames)
-        csv_writer.writeheader()
-        csv_writer.writerows(data)
 
     # Write the FASTA file
     with open(fasta_output, mode='w') as fasta_file:
@@ -134,6 +126,16 @@ def remap_and_generate_outputs(data, grouped_data, fasta_output, csv_output):
             # Write remapped cluster numbers
             cluster_indices = [old_to_new[int(row['Cluster'])] for row in rows]
             fasta_file.write(", ".join(map(str, sorted(cluster_indices))) + "\n")
+
+    # Remove the Cluster column from the data and write the updated CSV
+    for row in data:
+        del row['Cluster']  # Remove the Cluster column
+
+    with open(csv_output, mode='w', newline='') as outfile:
+        fieldnames = list(data[0].keys())  # Get updated field names after removing 'Cluster'
+        csv_writer = csv.DictWriter(outfile, fieldnames=fieldnames)
+        csv_writer.writeheader()
+        csv_writer.writerows(data)
 
     print(f"FASTA file saved to {fasta_output}")
     print(f"Updated CSV file saved to {csv_output}")
@@ -218,10 +220,3 @@ def process_csv_to_fasta(input_csv, fasta_output, csv_output):
     # Step 6: Remap clusters and write FASTA/CSV outputs
     remap_and_generate_outputs(data, grouped_data, fasta_output, csv_output)
 
-
-# Example Usage
-if __name__ == "__main__":
-    input_csv = 'original.csv'  # Input CSV file
-    fasta_output = 'remapped_clusters.fasta'  # Output FASTA file
-    csv_output = 'updated_clusters.csv'  # Output CSV file
-    process_csv_to_fasta(input_csv, fasta_output, csv_output)
