@@ -145,8 +145,9 @@ def run_crispr_identify(args, main_path):
               ' --max_identical_spacers ' + str(args.max_identical_spacers) +
               ' --max_identical_cluster_spacers ' + str(args.max_identical_cluster_spacers) +
               ' --margin_degenerated ' + str(args.margin_degenerated) +
-              ' --max_edit_distance_enhanced ' + str(args.max_edit_distance_enhanced)) +
+              ' --max_edit_distance_enhanced ' + str(args.max_edit_distance_enhanced) +
               ' --cpu ' + str(args.cpu)
+            )
     os.chdir(cur_path)
     return dirname_identify
 
