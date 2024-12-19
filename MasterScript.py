@@ -2,16 +2,18 @@ import pathlib
 import os
 import argparse
 
+from SpacerPlacerHelpers.spacer_placer import run_spacer_placer_tool
+
 
 def parse_arguments():
     parser = argparse.ArgumentParser()
 
+    parser.add_argument('--tool', type=str, default="identify",
+                        help='what tool is used')
+
     parser.add_argument('-f', '--fasta', dest='fasta_file',
                         help='Fasta file path (it can be either protein or DNA, see -st and -sc for details).',
                         default='Example/NC_006513.fa')
-
-    parser.add_argument('--tool', type=str, default="identify",
-                        help='what tool is used')
 
     parser.add_argument('--model', type=str, default="ALL",
                        help='model_to_use (default: ALL)')
@@ -76,14 +78,39 @@ def parse_arguments():
     parser.add_argument('--max_edit_distance_enhanced', type=int, default=6,
                         help='maximum edit distance for the evaluated array enhancement (default: 6)')
 
+
     parser.add_argument('--cpu', type=int, default=2,
                         help='number of CPUs to be used for parallelization (default: 2)')
+
+    parser.add_argument(
+        '--input_fasta_file_sp',
+        type=str,
+        help="Path to the input FASTA file."
+    )
+
+    parser.add_argument(
+        '--flag_use_db_sp',
+        type=bool,
+        help="Flag to use the database for Spacer Placer."
+    )
+
+    parser.add_argument(
+        '--flag_cluster_similar_sp',
+        type=bool,
+        help="Flag to cluster similar spacer sequences."
+    )
+
+    parser.add_argument(
+        '--folder_output_sp',
+        help="Path to the folder where the output will be stored."
+    )
+
 
     args = parser.parse_args()
     return args
 
 
-def run_crispr_identify(args):
+def run_crispr_identify(args, main_path):
     """
     This function runs the CRISPRidentify tool.
 
@@ -98,7 +125,9 @@ def run_crispr_identify(args):
     # WHY do you ignore the "--result_folder" argument?!?
     dirname_identify = cur_path + '/tmp/output-CRISPRidentify'
 
-    result = os.system('python3.7 CRISPRidentify.py --file ' + args.fasta_file +
+
+    result = os.system('python3.7 ' + main_path + '/CRISPRidentify/CRISPRidentify.py --file ' + args.fasta_file +
+
               ' --model ' + args.model +
               ' --result_folder ' + dirname_identify +
               ' --strand ' + str(args.strand) +
@@ -123,14 +152,28 @@ def run_crispr_identify(args):
 
 
 def run_spacer_placer(args):
-    pass
+    input_fasta_file_sp = args.input_fasta_file_sp
+    flag_use_db_sp = args.flag_use_db_sp
+    flag_cluster_similar_sp = args.flag_cluster_similar_sp
+    folder_output_sp = args.folder_output_sp
+    run_spacer_placer_tool(input_fasta_file_sp,
+                           flag_use_db_sp,
+                           flag_cluster_similar_sp,
+                           folder_output_sp)
+
 
 def main():
     args = parse_arguments()
+    main_path = str(pathlib.Path(__file__).parent.absolute())
+
     if args.tool == "identify":
-        run_crispr_identify(args)
+        run_crispr_identify(args, main_path)
     else:
+        print("running sp")
         run_spacer_placer(args)
 
 
-main()
+
+if __name__ == '__main__':
+    main()
+

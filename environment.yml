@@ -6,6 +6,7 @@ channels:
   - biobuilds
   - r
   - axfeh
+  - pip
 dependencies:
   - python==3.7.6
   - python_abi=3.7
