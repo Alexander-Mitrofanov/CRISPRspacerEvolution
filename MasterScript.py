@@ -78,6 +78,10 @@ def parse_arguments():
     parser.add_argument('--max_edit_distance_enhanced', type=int, default=6,
                         help='maximum edit distance for the evaluated array enhancement (default: 6)')
 
+
+    parser.add_argument('--cpu', type=int, default=2,
+                        help='number of CPUs to be used for parallelization (default: 2)')
+
     parser.add_argument(
         '--input_fasta_file_sp',
         type=str,
@@ -101,6 +105,7 @@ def parse_arguments():
         help="Path to the folder where the output will be stored."
     )
 
+
     args = parser.parse_args()
     return args
 
@@ -117,9 +122,12 @@ def run_crispr_identify(args, main_path):
     """
 
     cur_path = str(pathlib.Path().absolute())
+    # WHY do you ignore the "--result_folder" argument?!?
     dirname_identify = cur_path + '/tmp/output-CRISPRidentify'
 
+
     result = os.system('python3.7 ' + main_path + '/CRISPRidentify/CRISPRidentify.py --file ' + args.fasta_file +
+
               ' --model ' + args.model +
               ' --result_folder ' + dirname_identify +
               ' --strand ' + str(args.strand) +
@@ -137,7 +145,8 @@ def run_crispr_identify(args, main_path):
               ' --max_identical_spacers ' + str(args.max_identical_spacers) +
               ' --max_identical_cluster_spacers ' + str(args.max_identical_cluster_spacers) +
               ' --margin_degenerated ' + str(args.margin_degenerated) +
-              ' --max_edit_distance_enhanced ' + str(args.max_edit_distance_enhanced))
+              ' --max_edit_distance_enhanced ' + str(args.max_edit_distance_enhanced)) +
+              ' --cpu ' + str(args.cpu)
     os.chdir(cur_path)
     return dirname_identify
 
@@ -164,5 +173,7 @@ def main():
         run_spacer_placer(args)
 
 
+
 if __name__ == '__main__':
     main()
+
