@@ -8,12 +8,12 @@ from SpacerPlacerHelpers.spacer_placer import run_spacer_placer_tool
 def parse_arguments():
     parser = argparse.ArgumentParser()
 
+    parser.add_argument('--tool', type=str, default="identify",
+                        help='what tool is used')
+
     parser.add_argument('-f', '--fasta', dest='fasta_file',
                         help='Fasta file path (it can be either protein or DNA, see -st and -sc for details).',
                         default='Example/NC_006513.fa')
-
-    parser.add_argument('--tool', type=str, default="identify",
-                        help='what tool is used')
 
     parser.add_argument('--model', type=str, default="ALL",
                        help='model_to_use (default: ALL)')
@@ -80,7 +80,6 @@ def parse_arguments():
 
     parser.add_argument(
         '--input_fasta_file_sp',
-        required=True,
         type=str,
         help="Path to the input FASTA file."
     )
@@ -99,7 +98,6 @@ def parse_arguments():
 
     parser.add_argument(
         '--folder_output_sp',
-        required=True,
         help="Path to the folder where the output will be stored."
     )
 
@@ -107,7 +105,7 @@ def parse_arguments():
     return args
 
 
-def run_crispr_identify(args):
+def run_crispr_identify(args, main_path):
     """
     This function runs the CRISPRidentify tool.
 
@@ -121,7 +119,7 @@ def run_crispr_identify(args):
     cur_path = str(pathlib.Path().absolute())
     dirname_identify = cur_path + '/tmp/output-CRISPRidentify'
 
-    result = os.system('python3.7 CRISPRidentify/CRISPRidentify.py --file ' + args.fasta_file +
+    result = os.system('python3.7 ' + main_path + '/CRISPRidentify/CRISPRidentify.py --file ' + args.fasta_file +
               ' --model ' + args.model +
               ' --result_folder ' + dirname_identify +
               ' --strand ' + str(args.strand) +
@@ -154,15 +152,17 @@ def run_spacer_placer(args):
                            flag_cluster_similar_sp,
                            folder_output_sp)
 
+
 def main():
     args = parse_arguments()
+    main_path = str(pathlib.Path(__file__).parent.absolute())
+
     if args.tool == "identify":
-        run_crispr_identify(args)
+        run_crispr_identify(args, main_path)
     else:
         print("running sp")
         run_spacer_placer(args)
 
 
 if __name__ == '__main__':
-    print("here")
     main()
