@@ -122,14 +122,12 @@ def run_crispr_identify(args, main_path):
     """
 
     cur_path = str(pathlib.Path().absolute())
-    # WHY do you ignore the "--result_folder" argument?!?
-    dirname_identify = cur_path + '/tmp/output-CRISPRidentify'
 
 
     result = os.system('python3.7 ' + main_path + '/CRISPRidentify/CRISPRidentify.py --file ' + args.fasta_file +
 
               ' --model ' + args.model +
-              ' --result_folder ' + dirname_identify +
+              ' --result_folder ' + args.result_folder +
               ' --strand ' + str(args.strand) +
               ' --cas ' + "True" +
               ' --is_element ' + str(args.is_element) +
@@ -149,7 +147,7 @@ def run_crispr_identify(args, main_path):
               ' --cpu ' + str(args.cpu)
             )
     os.chdir(cur_path)
-    return dirname_identify
+    return
 
 
 def run_spacer_placer(args):
