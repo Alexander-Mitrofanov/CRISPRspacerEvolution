@@ -1,0 +1,84 @@
+Reconstruction was successful!
+Input and Output locations:
+	Input path: fasta_for_spacer_placer.fasta
+	Output path: ResultsSP
+
+More details can be found in the following folders/files:
+	Results in tabular format: ResultsSP/0_results.csv
+	More detailed results: ResultsSP/detailed_results
+	Additional data such as spacer fasta files and trees: ResultsSP/additional_data
+	Plots: ResultsSP/0_forward
+
+Used parameters:
+	verbosity: 1
+	seed: 2357
+	tree_path: None
+	input_type: spacer_fasta
+	cluster_spacers: False
+	rec_model: gtr
+	insertion_rate: 1e-05
+	deletion_rate: 0.1
+	extend_branches: False
+	tree_distance_function: likelihood
+	tree_construction_method: nj
+	tree_insertion_rate: None
+	tree_deletion_rate: None
+	tree_alpha: None
+	tree_lh_fct: simple
+	combine_non_unique_arrays: False
+	no_plot_reconstruction: False
+	no_plot_order_graph: False
+	dpi_rec: 90
+	figsize_rec: [None, None, 'px']
+	show_spacer_name_row: True
+	do_show: False
+	lh_fct: simple
+	no_alpha_bias_correction: False
+	no_rho_bias_correction: False
+	significance_level: 0.05
+	determine_orientation: False
+	orientation_decision_boundary: 5
+	save_reconstructed_events: False
+
+Result summary for each reconstructed group:
+
+fasta_for_spacer_placer:
+
+	Estimated parameters:
+	deletion_rate_bdm: 242.92769712116393
+	alpha_bdm: 2.4953182316712663
+	per_spacer_deletion_rate_bdm: 606.1819116043557
+	insertion_rate_bdm: 8638.09224036207
+	deletion_rate_idm: 460.13322696867954
+	insertion_rate_idm: 6556.898484303683
+
+	Likelihood ratio test:
+	ln_lh_idm: -77.03382799491982
+	ln_lh_bdm: -59.897125742287955
+	test result: True
+	Deletion model preferred by LRT: BDM
+	chi2_quantile: 3.8414588206941285
+
+	Reconstruction details:
+	nb of spacers in alignment: 27
+	nb of unique spacers: 26
+	nb of reconstructed insertions: 27
+	nb of reconstructed deletions: 42
+	nb of reconstructed dup/rearr candidates: 1
+	nb of reconstructed rearrangements: 0
+	nb of reconstructed duplications: 1
+	nb of reconstructed reacquisitions: 0
+	nb of reconstructed independent gains: 0
+	nb of reconstructed other dup. events: 0
+	nb of reconstructed ind. acquisitions, not duplicates: 0
+
+	Tree information:
+	tree height: 0.004180731687796608
+	tree length: 0.006849370058492744
+	min/max tree branch lengths: (0.0002429919839718104, 0.003937739703824798)
+	nb of leafs: 4
+
+	General information:
+	nb of unique spacer arrays: 4
+	run_time: 1.118752124999446
+

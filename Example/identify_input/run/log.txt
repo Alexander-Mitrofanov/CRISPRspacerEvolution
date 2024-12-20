@@ -1,0 +1,14 @@
+
+
+
+				Executing file /home/alex/GitHub/CRISPRspacerEvolution/CRISPRspacerEvolution/Example/identify_input/run/../NC_006513.fa
+
+
+
+1. Run initial array detection
+2. Refine detected arrays
+3. Evaluate candidates
+4. Enhance evaluated arrays
+5. Complement arrays with additional info
+6. Write down the results
+Elapsed time:  92.29738450050354

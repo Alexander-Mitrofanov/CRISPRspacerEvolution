@@ -1,0 +1,27 @@
+2024-12-20 01:03:56 - INFO - Starting SpacerPlacer on Input path: fasta_for_spacer_placer.fasta
+2024-12-20 01:03:56 - INFO - Loading and aligning the data...
+2024-12-20 01:03:56 - INFO - 1 / 1 aligning group fasta_for_spacer_placer... 
+
+Calling  /home/alex/miniconda3/envs/crispr_spacer_evolution_env/lib/python3.7/site-packages/sp_model/mafft_scripts/mafft-linux64/hex2maffttext ResultsSP/additional_data/work_folder/fasta_for_spacer_placer/fasta_for_spacer_placer.txt
+Calling  mafft --text --localpair --maxiterate 1000 --lep 0 --op 0 --lop 0 --lep 0 --lexp 0 --LOP 0 --LEXP 0 --quiet --thread -1 --randomseed 2357 --textmatrix ResultsSP/additional_data/work_folder/fasta_for_spacer_placer/fasta_for_spacer_placer_mx.txt ResultsSP/additional_data/work_folder/fasta_for_spacer_placer/fasta_for_spacer_placer.ascii
+Calling  /home/alex/miniconda3/envs/crispr_spacer_evolution_env/lib/python3.7/site-packages/sp_model/mafft_scripts/mafft-linux64/maffttext2hex ResultsSP/additional_data/work_folder/fasta_for_spacer_placer/fasta_for_spacer_placer_output.ascii
+2024-12-20 01:03:57 - INFO - Beginning reconstruction of (forward oriented) group(s)...
+
+2024-12-20 01:03:57 - INFO - Running Reconstruction with parameter dictionary: {'model': 'gtr', 'gain_rate': 1e-05, 'loss_rate': 0.1}
+2024-12-20 01:03:57 - INFO - Working on: fasta_for_spacer_placer
+2024-12-20 01:03:57 - INFO - Progress (group/total): 1 / 1
+2024-12-20 01:03:57 - INFO - Constructing tree with distance function: likelihood, tree construction method: nj, gain rate: 6522.48, loss rate: 137.2, alpha: 2.7278, provided_lh_fct: simple ...
+2024-12-20 01:03:57 - INFO - Constructing tree of fasta_for_spacer_placer...
+2024-12-20 01:03:57 - INFO - Fixing mismatches (relabeling)...
+2024-12-20 01:03:57 - INFO - Tree parameters; Distance to leaf: 0.004180731687796608 ; tree length: 0.006849370058492744
+2024-12-20 01:03:57 - INFO - Importing real data into model (also determine orders)...
+2024-12-20 01:03:57 - INFO - Length of topological order: 27
+2024-12-20 01:03:57 - INFO - ln(lh_idm): -77.03382799491982 ; ln(lh_bdm): -59.897125742287955 ; test statistic (2*(ln(lh_bdm) - ln(lh_idm)): 34.27340450526373 ; test significant?: True ; chi2 quantile: 3.8414588206941285 ; of chosen significance level: 0.05
+2024-12-20 01:03:57 - INFO - Test decides for: BDM ; estimated ML IDM parameter: 460.13322696867954 ; estimated ML BDM parameters [deletion_rate, alpha]: [242.92769712   2.49531823]
+2024-12-20 01:03:58 - INFO - Run time of group "fasta_for_spacer_placer": 1.118752124999446 s
+
+2024-12-20 01:03:58 - INFO - Runtime of all experiments: 1.13 s ; detailed results saved to ResultsSP/0_forward/0_protocol
+running sp
+FASTA file saved to fasta_for_spacer_placer.fasta
+Updated CSV file saved to csv_for_spacer_placer.csv
+Command executed successfully.

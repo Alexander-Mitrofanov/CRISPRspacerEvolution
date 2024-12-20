@@ -1,0 +1,98 @@
+Alternative CRISPR: 2, 1950431-1948537, number of Repeats: 28, avg. length of Repeat: 38, avg length of Spacer: 33
+
+1950431   ..................................... .  ATGCCGGCGCGCAGCAGCATCGCCTTGCAGTCC        s:0 i:0 d:0
+1950360   ..................................... T  ATCCGACGGAGGACATGCCGATCGGCGTGCTGA        s:1 i:0 d:0
+1950289   ..................................... T  CTAAATTCCTGGCAGACGTGAAGGCGGGAAACCA       s:1 i:0 d:0
+1950217   ..................................... A  TGGGCAGCAAGCAATGCTGCGCATCCACAAAAC        s:1 i:0 d:0
+1950146   ..................................... A  TCACAAATCCCTAATGCTCGCGCCCAACTCAAC        s:1 i:0 d:0
+1950074   .....................................A.  TAATCGGCCCGAAGTCGCATCCGTCGCGCTCTG        s:0 i:1 d:0
+1950003   ..................................... T  CATTCGACCTCGATGTATTCGACGACGGGCTGGCG      s:1 i:0 d:0
+1949929   .....................................T.  CCTGGGGCGCGGTGGTTGAGGTGCCGGCCTTT         s:0 i:1 d:0
+1949859   ..................................... .  TGCTCGACAGCATGCTGAAGTGCGGCATCGCTG        s:0 i:0 d:0
+1949787   .....................................A.  ATTGACCAGTACGTCGGCATAGAGACTGCTAT         s:0 i:1 d:0
+1949716   .....................................A.  CCAGGAGATGGCTGACACCGAACTCGTCGACC         s:0 i:1 d:0
+1949646   ..................................... A  TTGACGACCCAGCGTGTCGGCTGATCACGCTGC        s:1 i:0 d:0
+1949575   ..................................... A  CCGGTGAGCCCGTTGAGGTGGCAGAAATCGAC         s:1 i:0 d:0
+1949505   ..................................... .  TTCCGAGCGCTTGCCACGCTCCGGCGTAGTCGG        s:0 i:0 d:0
+1949433   .....................................T.  GTTCCGCATCGGTCACGCCGGCAACCCGACCTA        s:0 i:1 d:0
+1949362   ..................................... .  CCGTGCCGTTGAAGCTCACGCCATTGATCGTGCG       s:0 i:0 d:0
+1949290   ..................................... .  CGTTGGCGGCCCAATCGATCGCCGTGCCGGAGAGT      s:0 i:0 d:0
+1949217   ..................................... C  TCCGATATGACCCTGCAGGCGGAAACGTTCGCC        s:1 i:0 d:0
+1949145   .....................................A.  TCCGCGTGCGGTAGCGGAACACGCACTCGATC         s:0 i:1 d:0
+1949075   ..................................... .  ACGATGACCAGCGGATCGTCCCCGTGACCGGGTTC      s:0 i:0 d:0
+1949002   ..................................... .  CTTTTGTTCGCTACCGAGCAAGGCGATGACGCC        s:0 i:0 d:0
+1948931   ..................................... .  GCGAATTCGTCGAGGCGGTGCGGCAGTGGGGGCGG      s:0 i:0 d:0
+1948857   .....................................A.  CCAGAACGAGTGCATGGGCAAGATCGTGGGGA         s:0 i:1 d:0
+1948787   ..................................... T  CGTTGATGGGGATGCAGCCGGCGATCTCTCCTC        s:1 i:0 d:0
+1948716   ..................................... .  CGACGACAACTGACCTGCTCCCGCACCAGGAGG        s:0 i:0 d:0
+1948645   ..................................... A  ATAAGTCGCCGACCATGAACAAGGACAACATCAT       s:1 i:0 d:0
+1948573   ..................................... A  CCATGAATCCGACCATCGAGCCGAAGGTCATATCC      s:1 i:0 d:0
+1948499   .....................................A.                                           s:0 i:1 d:0
+____________________________________________________________________________________________________
+          GCATCGCCCCTCGGTGACGGGGGGCGTGGATTGAAAC G                                           s:11 i:8 d:0
+
+Strand: Reversed
+
+
+repeat_similarity: 0.9609209612387736
+avg_spacer_len: 33.25925925925926
+spacer_similarity: 0.33667503550991335
+number_mismatches: 19.0
+spacer_evenness: -0.0
+mfe_score: -14.40
+orf_score: 99.54
+blast_score_1: 0.0
+number_repeats: 28.0
+hmmr_score: 0.0
+blast_score_2: 0.0
+repeat_len: 39.0
+at_richness: 0.3302238805970149
+
+Certainty Score: 0.7145725003483611
+
+
+
+====================================================================================================
+
+Alternative CRISPR: 3, 1953537-1952640, number of Repeats: 14, avg. length of Repeat: 39, avg length of Spacer: 33
+
+1953537   .................................... ...  GAACGTAACGAAGACGATCGGCAACAACGCCGC        s:0 i:0 d:0
+1953464   ....................................C...  GTACGCGCTTTAGTTGCCATGCCACGCCGAA          s:0 i:1 d:0
+1953395   .................................... .-.  CGCAGGCCACCCTGCACCAATATCGATCCCATCC       s:0 i:0 d:1
+1953322   .................................... .T.  GTTAGTGTGGCTTATCCACCCCGCCGACTCAATC       s:1 i:0 d:0
+1953249   .................................... .G.  CACGTTCGACCTCGACCGTGCACATCTGCAAGA        s:1 i:0 d:0
+1953178   .................................... .-.  TCAGGTGCTTGTAGTAGCCGCCGGCCGCGCCGAG       s:0 i:0 d:1
+1953106   .................................... .-.  CCTCTCCCGTGGCCCGATCGACGATCGGATTGC        s:0 i:0 d:1
+1953035   .................................... .-.  TCTTGTGCGGCCCTCCGTCGGTGCCAGTGGTTG        s:0 i:0 d:1
+1952964   .................................... .-.  TCGAGACGCAGCGGATCGCCGCGAACAAGTCGTT       s:0 i:0 d:1
+1952891   .................................... ...  TCGCAAGGGCTTCGCGCTGTTCAAGGTCGCGTT        s:0 i:0 d:0
+1952820   .................................... .-.  TCGCCTGCATGGTGATGGCCAGGCAGTCGCCGAC       s:0 i:0 d:1
+1952747   .................................... .TG  CTCCGCTGCACGCTCTGCGGGCACGAGATGCG         s:2 i:0 d:0
+1952676   .................................... ..T  CGGTTTCCGCAAACACCACCAGCCCGCCCTCGCTG      s:1 i:0 d:0
+1952602   .................................... ...                                           s:0 i:0 d:0
+____________________________________________________________________________________________________
+          GCATCGCCCCTCGGTGACGGGGGGCGTGGATTGAAA CCA                                           s:5 i:1 d:6
+
+Strand: Reversed
+
+
+repeat_similarity: 0.9561586546845983
+avg_spacer_len: 33.30769230769231
+spacer_similarity: 0.32977612586941557
+number_mismatches: 12.0
+spacer_evenness: -0.0
+mfe_score: -15.30
+orf_score: 0.0
+blast_score_1: 0.0
+number_repeats: 14.0
+hmmr_score: 0.0
+blast_score_2: 0.0
+repeat_len: 40.0
+at_richness: 0.33826247689463956
+
+Certainty Score: 0.7113867805229143
+
+
+
+====================================================================================================
+

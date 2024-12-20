@@ -1,0 +1,222 @@
+>gi|56475432|ref|NC_006513.1| Aromatoleum aromaticum EbN1 chromosome, complete genome
+
+Cas genes: ['cas3'] [118659-119816], ['cas3', 'cas3'] [167384-173623], ['cas9'] [214166-215221], ['cas3'] [389311-392208], ['cas3'] [789994-790965], ['cas12'] [800793-801023], ['cas1'] [953476-954717], ['cas10'] [983184-985109], ['cas12'] [1016995-1017174], ['cas12'] [1080767-1081276], ['cas12'] [1192308-1193147], ['cas3'] [1283264-1284046], ['cas3'] [1327278-1328402], ['cas3'] [1352655-1354634], ['cas3'] [1443856-1446735], ['cas12'] [1522735-1523958], ['cas3'] [1675705-1677876], ['cas3'] [1918192-1919448]
+
+CRISPR: 1, 1946881-1941501, number of Repeats: 76, avg. length of Repeat: 37, avg length of Spacer: 35
+
+1946881   .....................................  CACGCACAGGACTCGGTCAGCAGTCTGAACCTCA                s:0 i:0 d:0
+1946810   .....................................  CTCGGTCGCGCTTGTCTCTTCACTGGGCAGCATC                s:0 i:0 d:0
+1946739   .....................................  GATCCAGTCGGCGGTGTAGGCGACCATTCGGCGCC               s:0 i:0 d:0
+1946667   .....................................  TCGAACGACGGAGCGCAGTCCTCGCACATGCAGAGCC             s:0 i:0 d:0
+1946593   .....................................  TTTCTGTCCTCGCTCTTAGTGGTAACAAAGATGC                s:0 i:0 d:0
+1946522   .....................................  TTGCGCTGCTTCGTCGCCTTGTCGTACTTATCGA                s:0 i:0 d:0
+1946451   .....................................  GATTTCCGACAGCCGCGACAGCAGCGCCGTTTTGATGCG           s:0 i:0 d:0
+1946375   .....................................  CTCTTGCTGTACCGGCTCGACACCACGGACGAGA                s:0 i:0 d:0
+1946304   .....................................  GCACCGCGCAACGTGCGGCACATCCTGGACCTCACC              s:0 i:0 d:0
+1946231   .....................................  TCCGACATCGTCCTGTGCATGGACATGGACGAGCC               s:0 i:0 d:0
+1946159   .....................................  GGTACAGGTAATCCCACTCGGCGTCGCTCATGCCC               s:0 i:0 d:0
+1946087   .....................................  GTCGACCGTGCGCCGCTGAGCCAGTACGTCCGGG                s:0 i:0 d:0
+1946016   .....................................  CTTAGCCCCGCGCAACTTGAGGCAGCCGAGAATCG               s:0 i:0 d:0
+1945944   .....................................  GCGTCGATCAGCAAGACGACCGCGGAATCGGTGCGC              s:0 i:0 d:0
+1945871   .....................................  CTGTTGGGCTGCGTCTGCGGCATCAATCGTCGCCTG              s:0 i:0 d:0
+1945798   .....................................  CTCGATCTGCCGGTGCACCACCGCCTTGATGACC                s:0 i:0 d:0
+1945727   .....................................  CGCCGAACCGAATCGCCCCCGCCAATCTTGGTCCA               s:0 i:0 d:0
+1945655   .....................................  TGTCGGGCGCTACGGTGCTGATCGCTCCAATTCCG               s:0 i:0 d:0
+1945583   .....................................  GCCCTCTATCCAGACCTCAACTGCCTCCTGGATC                s:0 i:0 d:0
+1945512   .....................................  AACAAAACCTTCGTCGACGTGCAGGCGATCACTGT               s:0 i:0 d:0
+1945440   .....................................  GCTCTCAACAGCCGCAAAAAATCCGCCCCAGCCAC               s:0 i:0 d:0
+1945368   .....................................  ATGTGATCCCCCTTCCCACCGACCCGTCGCCAGC                s:0 i:0 d:0
+1945297   .....................................  GACACCTATCTCTATGAGCAGGCCGAGAAGCTGAA               s:0 i:0 d:0
+1945225   .....................................  GCCTGACCGAACCCTCCCGCCCACGACCACGCCGC               s:0 i:0 d:0
+1945153   .....................................  GCGCGCAAGTACAACCACGACCCGCAAAAAGGCTTC              s:0 i:0 d:0
+1945080   .....................................  GTGTAGTTGCCGTGGTTGTCGTGGCCGACGATCGT               s:0 i:0 d:0
+1945008   .....................................  ATCGACAGCGTGCCGCACCCGACGCGTCGGGCCATC              s:0 i:0 d:0
+1944935   .....................................  GCGCCGATCGAGGGTGAGGCGTGAGCGCCGAGCG                s:0 i:0 d:0
+1944864   .....................................  TCGGTGACGTTCTCCGCACCGTTGCGGATTGCGGC               s:0 i:0 d:0
+1944792   .....................................  AGCGCGAGTTCGCAGCACGCATCGCGCAGCGCCG                s:0 i:0 d:0
+1944721   .....................................  GATACGGCCGTCGCGCTCGCCGGGCAAGTGTGGGGC              s:0 i:0 d:0
+1944648   .....................................  GCGCAGCACCGGGTCGAGCGTGACCGTGGTGACG                s:0 i:0 d:0
+1944577   .....................................  GCCGTGATAAGCGGCGTCGGTCATCAAGTCGAACG               s:0 i:0 d:0
+1944505   .....................................  AGGTGGGTCATGAGGGGTTGGAACGAACAGGTGCG               s:0 i:0 d:0
+1944433   .....................................  CCCGAGTCGATTTTCATCGCCGACGCGCTCACCC                s:0 i:0 d:0
+1944362   .....................................  CCCGACATCGACCCCGCTGCGGCGCGCCTCGCCATG              s:0 i:0 d:0
+1944289   .....................................  GCCTGTGTCGTCGCGCTGGTAGGCACCGGCGAAG                s:0 i:0 d:0
+1944218   .....................................  GACATGAGCACGGCGGCCGGTCGCGCCCTGGCGAG               s:0 i:0 d:0
+1944146   .....................................  GGCATGGATCGAGGTTTTCACGCTCACGGGGCAGCC              s:0 i:0 d:0
+1944073   .....................................  TGGCTGACGATCAGGTCCGCGGCGAGGATCTCGGG               s:0 i:0 d:0
+1944001   .....................................  AGCTTGTCGTGGGCGGTCTTCAGCGCCTGGTGCTCGGCAGTCGA      s:0 i:0 d:0
+1943920   .....................................  GGCGTCTTCGGCCGTGAAGGCGCTGGCGCTCGCAT               s:0 i:0 d:0
+1943848   .....................................  CGGTCTGGTCGTGCGTGTCGTCCGGACTGCTCGAA               s:0 i:0 d:0
+1943776   .....................................  AGGTAATCGAGGTCCGGCCGCAGCGGGTCGCCGT                s:0 i:0 d:0
+1943705   .....................................  TACGTCGACTCGGCGCTCGCGTCGGTGCAACTAAT               s:0 i:0 d:0
+1943633   .....................................  TTCGAGCTTGGCGCGGTGCTCGGCGATCTGCCGG                s:0 i:0 d:0
+1943562   .....................................  AACCTGCCAAGCGAACTCGACGCACAACTCACGTG               s:0 i:0 d:0
+1943490   .....................................  AAGCTCGTGCTCGCCGACGCCGGATGGACCGACGC               s:0 i:0 d:0
+1943418   .....................................  CATCAGTTGCAGGTCGTCGAGCGCCCGATCCCAC                s:0 i:0 d:0
+1943347   .....................................  ATGACGGCAATCACGATCACGGCGTAAGCGCCAAG               s:0 i:0 d:0
+1943275   .....................................  ACGTCCTGCACGCCGAGATACGCCTTAGCCTCGCG               s:0 i:0 d:0
+1943203   .....................................  AGTGGTTACCCGGCAACGCCGGCATTGGTGACCGTG              s:0 i:0 d:0
+1943130   .....................................  GAAGTTCGCCGCGTCGGCGAAGCTCGCCGGGCGC                s:0 i:0 d:0
+1943059   .....................................  GGGATGGACCGACGCCTACATCAAGCTGATCCGCG               s:0 i:0 d:0
+1942987   .....................................  ATCTTCTCAGTCCGCCCCTTTCCGTCGCAGTCCGG               s:0 i:0 d:0
+1942915   .....................................  TCCCTGATCGCCTGCTTCACCGCGGCGAGGCAGCC               s:0 i:0 d:0
+1942843   .....................................  GTCGTATTCGTGCTCGACTTTTTACTGCTGCCGCCG              s:0 i:0 d:0
+1942770   .....................................  CGTTTCCATCGTCGCCCAGTCAGCCGGGTTCAGGAC              s:0 i:0 d:0
+1942697   .....................................  CCGCTCGACGATGCGCACCGCCCGGCCTGCCGC                 s:0 i:0 d:0
+1942627   .....................................  GAGACAGGGAGGATGCCGTGAATACCGTGTGCATG               s:0 i:0 d:0
+1942555   .....................................  AAGGTATTCGTTCTTGTCTTTGTCAGCCATCACTCAG             s:0 i:0 d:0
+1942481   .....................................  ATTTGCGACTTGAGGCGCAAAGAGGCGGGCGCCAGCTTG           s:0 i:0 d:0
+1942405   .....................................  AATATGACTACGCCGCAGAACGAACTCGAACGAT                s:0 i:0 d:0
+1942334   .....................................  AGGTTGTCCTTGATCTGCTGGTAGGCGTTCCAGC                s:0 i:0 d:0
+1942263   .....................................  AAGCTGTTCGCCGCGGTTGTCCCAGCCGGCATTGA               s:0 i:0 d:0
+1942191   .....................................  CCCCTGCCGGTGTTCGACTACCGCGACATCCGTGAG              s:0 i:0 d:0
+1942118   .....................................  GAGGTCGAACTTGACCACCTGCCCCTCGGGGAACAT              s:0 i:0 d:0
+1942045   .....................................  GTGCTGCATGGCGTGCAGTGGGACTGCGTCAACA                s:0 i:0 d:0
+1941974   .....................................  TACGTGCGTAAGCGTGTGGGAGGGAAGCTCAGGAA               s:0 i:0 d:0
+1941902   .....................................  GCTCTAGTTCGCGGATGAACCCCCCGCCGAACTGATCG            s:0 i:0 d:0
+1941827   .....................................  TTCGGCCAACCGCTGAGATGCCTAACCACCCGAACC              s:0 i:0 d:0
+1941754   .....................................  CGCTTCGCTGCCGTACCTCCGGTAAAACTCGCGCTTG             s:0 i:0 d:0
+1941680   .....................................  GACGTACAGCCCGTTGTCGTCCTCTTTTGCGACG                s:0 i:0 d:0
+1941609   .....................................  TCGTCCAGCAGCTTGCCGATCGTCTTGATCTTGGT               s:0 i:0 d:0
+1941537   .....................................  CAGTTCCGGACCCTGCTCGCCGACGAGGCGCAGCC               s:0 i:0 d:0
+1941465   ........................T............                                                    s:1 i:0 d:0
+____________________________________________________________________________________________________
+          GCATCGCCCCTCGGTGACGGGGGGCGTGGATTGAAAC                                                    s:1 i:0 d:0
+
+Leader region
+GCCCTTCCACCACATCGACCACGTAGCGCGCCAAGTGCGATTCGGGCAGCCAGTCCTGCACCGACGGTGGTAGCAGGTAGTCCGTTTGGCGATCGATCGGGCGGAAGCGGCTCATGCTCTCGGGTTCCAGGGGCGACGCGTCATTTTACAGGGGATAGTCCGACACGCTGCTAGGATCAGGCCATCAAGGTTCGACGGGA
+
+Downstream region
+ATCATTTGATGGCAAGTCCACCAGGAGGGTCCATGAAGGCCTTTACCGCCCGAGATCTTCGCGAGCGCACTGCGCAAGTGGTCCGCGTTGCAGAGGAAGGCAAGATGTCTGTCGTGACCAAGCGCGGCAAGCCAGCTTTCGTCGCGGTACCCTTCGATGAGGCGTTGCTGGAAAGCGGGGTACGGACATCGCTGGCGATC
+
+Strand: Reversed
+
+#   Array features:
+#   repeat_similarity: 0.9967632980065122
+#   avg_spacer_len: 35.21333333333333
+#   spacer_similarity: 0.3360319943594401
+#   number_mismatches: 1.0
+#   spacer_evenness: 0.173116
+#   mfe_score: -14.40
+#   orf_score: 99.53
+#   blast_score_1: 0.0
+#   number_repeats: 76.0
+#   hmmr_score: 0.0
+#   blast_score_2: 0.0
+#   repeat_len: 37.0
+#   at_richness: 0.32467994310099574
+______________________________
+#   Certainty Score: 0.7714218808247448
+
+
+====================================================================================================
+
+CRISPR: 2, 1950432-1948537, number of Repeats: 28, avg. length of Repeat: 37, avg length of Spacer: 34
+
+1950432   .....................................  GATGCCGGCGCGCAGCAGCATCGCCTTGCAGTCC        s:0 i:0 d:0
+1950361   .....................................  TATCCGACGGAGGACATGCCGATCGGCGTGCTGA        s:0 i:0 d:0
+1950290   .....................................  TCTAAATTCCTGGCAGACGTGAAGGCGGGAAACCA       s:0 i:0 d:0
+1950218   .....................................  ATGGGCAGCAAGCAATGCTGCGCATCCACAAAAC        s:0 i:0 d:0
+1950147   .....................................  ATCACAAATCCCTAATGCTCGCGCCCAACTCAAC        s:0 i:0 d:0
+1950076   .....................................  AGTAATCGGCCCGAAGTCGCATCCGTCGCGCTCTG       s:0 i:0 d:0
+1950004   .....................................  TCATTCGACCTCGATGTATTCGACGACGGGCTGGCG      s:0 i:0 d:0
+1949931   .....................................  TGCCTGGGGCGCGGTGGTTGAGGTGCCGGCCTTT        s:0 i:0 d:0
+1949860   .....................................  GTGCTCGACAGCATGCTGAAGTGCGGCATCGCTG        s:0 i:0 d:0
+1949789   .....................................  AGATTGACCAGTACGTCGGCATAGAGACTGCTAT        s:0 i:0 d:0
+1949718   .....................................  AGCCAGGAGATGGCTGACACCGAACTCGTCGACC        s:0 i:0 d:0
+1949647   .....................................  ATTGACGACCCAGCGTGTCGGCTGATCACGCTGC        s:0 i:0 d:0
+1949576   .....................................  ACCGGTGAGCCCGTTGAGGTGGCAGAAATCGAC         s:0 i:0 d:0
+1949506   .....................................  GTTCCGAGCGCTTGCCACGCTCCGGCGTAGTCGG        s:0 i:0 d:0
+1949435   .....................................  TGGTTCCGCATCGGTCACGCCGGCAACCCGACCTA       s:0 i:0 d:0
+1949363   .....................................  GCCGTGCCGTTGAAGCTCACGCCATTGATCGTGCG       s:0 i:0 d:0
+1949291   .....................................  GCGTTGGCGGCCCAATCGATCGCCGTGCCGGAGAGT      s:0 i:0 d:0
+1949218   .....................................  CTCCGATATGACCCTGCAGGCGGAAACGTTCGCC        s:0 i:0 d:0
+1949147   .....................................  AGTCCGCGTGCGGTAGCGGAACACGCACTCGATC        s:0 i:0 d:0
+1949076   .....................................  GACGATGACCAGCGGATCGTCCCCGTGACCGGGTTC      s:0 i:0 d:0
+1949003   .....................................  GCTTTTGTTCGCTACCGAGCAAGGCGATGACGCC        s:0 i:0 d:0
+1948932   .....................................  GGCGAATTCGTCGAGGCGGTGCGGCAGTGGGGGCGG      s:0 i:0 d:0
+1948859   .....................................  AGCCAGAACGAGTGCATGGGCAAGATCGTGGGGA        s:0 i:0 d:0
+1948788   .....................................  TCGTTGATGGGGATGCAGCCGGCGATCTCTCCTC        s:0 i:0 d:0
+1948717   .....................................  GCGACGACAACTGACCTGCTCCCGCACCAGGAGG        s:0 i:0 d:0
+1948646   .....................................  AATAAGTCGCCGACCATGAACAAGGACAACATCAT       s:0 i:0 d:0
+1948574   .....................................  ACCATGAATCCGACCATCGAGCCGAAGGTCATATCC      s:0 i:0 d:0
+1948501   .....................................                                            s:0 i:0 d:0
+____________________________________________________________________________________________________
+          GCATCGCCCCTCGGTGACGGGGGGCGTGGATTGAAAC                                            s:0 i:0 d:0
+
+Leader region
+CACCTCGGCGGCGATCCGCCGAAGGCTCAACCCGTGACGCCTCAACAGTTCGATTTCCACATACACCTCGTCTGTGATCACCCGGGCTCCAAATGGCCCGATCTTCTCAACTCGGTGTATCAACTTTCAATCGGCAGCCCGTATCAACTTACATCCGGCAGTGACAATCCAGAAGTGCGGCCTCACGGCGCCAGTTCCTG
+
+Downstream region
+GGTCTAGCAGCGTGTCGGACTTGAGCACCGCCGGCGCTGTATCCGGGGGCTTGATTTCACAATGTGAGAAACGGTCGGCATTTCAGGTTCCAATCAGCGGTTTCCTGTCCGAAATCGCAATGCCCCTGTCCTTTTTTCTCACTGCGGACGCAATACGGCCATGCGCTTCAAGTTCCACGCCAAGCACACCAGGGTCCACT
+
+Strand: Reversed
+
+#   Array features:
+#   repeat_similarity: 1.0
+#   avg_spacer_len: 34.51851851851852
+#   spacer_similarity: 0.33979381199437264
+#   number_mismatches: 0.0
+#   spacer_evenness: -0.0
+#   mfe_score: -14.40
+#   orf_score: 99.54
+#   blast_score_1: 0.0
+#   number_repeats: 28.0
+#   hmmr_score: 0.0
+#   blast_score_2: 0.0
+#   repeat_len: 37.0
+#   at_richness: 0.32432432432432434
+______________________________
+#   Certainty Score: 0.8028340748911914
+
+
+====================================================================================================
+
+CRISPR: 3, 1953539-1952640, number of Repeats: 14, avg. length of Repeat: 37, avg length of Spacer: 34
+
+1953539   .....................................  CAGAACGTAACGAAGACGATCGGCAACAACGCCGC        s:0 i:0 d:0
+1953467   .....................................  CCAGTACGCGCTTTAGTTGCCATGCCACGCCGAA         s:0 i:0 d:0
+1953396   .....................................  ACGCAGGCCACCCTGCACCAATATCGATCCCATCC        s:0 i:0 d:0
+1953324   .....................................  TAGTTAGTGTGGCTTATCCACCCCGCCGACTCAATC       s:0 i:0 d:0
+1953251   .....................................  GACACGTTCGACCTCGACCGTGCACATCTGCAAGA        s:0 i:0 d:0
+1953179   .....................................  ATCAGGTGCTTGTAGTAGCCGCCGGCCGCGCCGAG        s:0 i:0 d:0
+1953107   .....................................  ACCTCTCCCGTGGCCCGATCGACGATCGGATTGC         s:0 i:0 d:0
+1953036   .....................................  ATCTTGTGCGGCCCTCCGTCGGTGCCAGTGGTTG         s:0 i:0 d:0
+1952965   .....................................  ATCGAGACGCAGCGGATCGCCGCGAACAAGTCGTT        s:0 i:0 d:0
+1952893   .....................................  CATCGCAAGGGCTTCGCGCTGTTCAAGGTCGCGTT        s:0 i:0 d:0
+1952821   .....................................  ATCGCCTGCATGGTGATGGCCAGGCAGTCGCCGAC        s:0 i:0 d:0
+1952749   .....................................  TGCTCCGCTGCACGCTCTGCGGGCACGAGATGCG         s:0 i:0 d:0
+1952678   .....................................  CTCGGTTTCCGCAAACACCACCAGCCCGCCCTCGCTG      s:0 i:0 d:0
+1952604   .....................................                                             s:0 i:0 d:0
+____________________________________________________________________________________________________
+          GCATCGCCCCTCGGTGACGGGGGGCGTGGATTGAAAC                                             s:0 i:0 d:0
+
+Leader region
+GTTGGTGTTGTAGGATTCGCTTGCGCGAACCTCAAGCAACCGGGACATTCCCTATAGGTTCGCGCAGAGCGGAGGCCTTTGCTTTTACTCGTTATTACTCCGGATTGTCCAAATGAAATCACCCCGACGAACTTCTTCGCACAGAGGTTCTCGTAACACGTTCTTAATTCGTCGGCGGATCAATACATTACGTGCGAAGA
+
+Downstream region
+ATCCATGTCAATGCCGATTTAAAACTGACACGCTTTCCCGGCGGTTGCCGATTTAAAACTGATACACCTCTATCCCATTGACATGTGCGACGGAGCGCCCCGAAGGGAGGGCCGAAGGCCCGACCGCAGGGGCGCTCCGTCGCGCGGCCCTCAGCCGGCGACCGCCAGCGCTTGCACCATCCCGGCCTTGCGCTGGTGTT
+
+Strand: Reversed
+
+#   Array features:
+#   repeat_similarity: 1.0
+#   avg_spacer_len: 34.92307692307692
+#   spacer_similarity: 0.3329858328200946
+#   number_mismatches: 0.0
+#   spacer_evenness: 0.151354
+#   mfe_score: -14.40
+#   orf_score: 0.0
+#   blast_score_1: 0.0
+#   number_repeats: 14.0
+#   hmmr_score: 0.0
+#   blast_score_2: 0.0
+#   repeat_len: 37.0
+#   at_richness: 0.32432432432432434
+______________________________
+#   Certainty Score: 0.7503204204795004
+
+
+
+Cas genes: ['cas2', 'cas1', 'cas4'] [1953763-1955721], ['cas7', 'cas8'] [1956371-1958388], ['cas5', 'cas3'] [1959060-1962246], ['cas3'] [2006477-2007700], ['cas3'] [2106258-2107649], ['cas3'] [2171527-2173053], ['cas10'] [2229756-2230865], ['cas3'] [2487487-2489319], ['cas6'] [2546992-2547891], ['cas3'] [2671502-2672977], ['cas3'] [2723027-2724154], ['cas8'] [2726858-2727304], ['cas9'] [2760746-2761393], ['cas2'] [2805061-2806320], ['cas12'] [2827175-2828044], ['cas3'] [2955590-2956858], ['cas7'] [3004961-3005470], ['cas8'] [3253795-3254724], ['cas3'] [3402825-3404687], ['cas12'] [3580121-3580285], ['cas8'] [3795449-3796603], ['cas3'] [3885874-3889347], ['cas6'] [4227985-4228371], ['cas6'] [4248366-4249265]
+
