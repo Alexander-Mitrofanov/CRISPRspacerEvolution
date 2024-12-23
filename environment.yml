@@ -10,6 +10,7 @@ channels:
 dependencies:
   - xorg-x11-server-xvfb-cos6-x86_64
   - xorg-xauth
+  - xorg-font-util
   - python==3.7.6
   - python_abi=3.7
   - biopython=1.76
