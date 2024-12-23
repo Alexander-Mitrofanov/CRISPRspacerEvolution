@@ -8,6 +8,7 @@ channels:
   - axfeh
   - pip
 dependencies:
+  - xorg-x11-server-xvfb-cos6-x86_64
   - python==3.7.6
   - python_abi=3.7
   - biopython=1.76
