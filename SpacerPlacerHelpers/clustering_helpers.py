@@ -196,8 +196,15 @@ def fasta_to_csv(fasta_file_path, output_csv_path):
 
 
 
-def process_csv_to_fasta(input_csv, fasta_output, csv_output):
-    """Main function to process the CSV, cluster sequences, and generate outputs."""
+def process_csv_to_fasta(input_csv, fasta_output, csv_output, clustering=True):
+    """Main function to process the CSV, optionally cluster sequences, and generate outputs.
+
+    Args:
+        input_csv (str): Path to the input CSV file.
+        fasta_output (str): Path to the output FASTA file.
+        csv_output (str): Path to the output CSV file.
+        clustering (bool): If True, perform complex clustering; otherwise, group identical sequences.
+    """
     # Step 1: Read CSV
     with open(input_csv, mode='r') as infile:
         csv_reader = csv.DictReader(infile)
@@ -206,9 +213,15 @@ def process_csv_to_fasta(input_csv, fasta_output, csv_output):
     # Step 2: Extract spacer sequences
     spacer_sequences = [row['Spacer Sequence'] for row in data]
 
-    # Step 3: Cluster the sequences
-    clusters = cluster_sequences(spacer_sequences)
-    sequence_to_cluster = create_cluster_dict(clusters)
+    # Step 3: Assign clusters based on the clustering flag
+    if clustering:
+        # Perform complex clustering (edit distance of 0 or 1)
+        clusters = cluster_sequences(spacer_sequences)
+        sequence_to_cluster = create_cluster_dict(clusters)
+    else:
+        # Group by identical sequences only
+        unique_sequences = list(set(spacer_sequences))
+        sequence_to_cluster = {seq: idx for idx, seq in enumerate(unique_sequences, start=1)}
 
     # Step 4: Add Cluster column to the data
     for row in data:
@@ -219,4 +232,6 @@ def process_csv_to_fasta(input_csv, fasta_output, csv_output):
 
     # Step 6: Remap clusters and write FASTA/CSV outputs
     remap_and_generate_outputs(data, grouped_data, fasta_output, csv_output)
+
+    print(f"Process completed. Outputs saved to {fasta_output} and {csv_output}")
 

@@ -90,13 +90,27 @@ def parse_arguments():
 
     parser.add_argument(
         '--flag_use_db_sp',
-        type=bool,
+        action='store_true',
+        help="Flag to use the database for Spacer Placer."
+    )
+
+    parser.add_argument(
+        '--no-flag_use_db_sp',
+        dest='flag_use_db_sp',
+        action='store_false',
         help="Flag to use the database for Spacer Placer."
     )
 
     parser.add_argument(
         '--flag_cluster_similar_sp',
-        type=bool,
+        action='store_true',
+        help="Flag to cluster similar spacer sequences."
+    )
+
+    parser.add_argument(
+        '--no-flag_cluster_similar_sp',
+        dest='flag_cluster_similar_sp',
+        action='store_false',
         help="Flag to cluster similar spacer sequences."
     )
 
@@ -147,7 +161,6 @@ def run_crispr_identify(args, main_path):
               ' --cpu ' + str(args.cpu)
             )
     os.chdir(cur_path)
-    return
 
 
 def run_spacer_placer(args):
