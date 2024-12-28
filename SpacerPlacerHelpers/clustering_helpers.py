@@ -3,7 +3,7 @@ import os
 import csv
 from collections import defaultdict
 import Levenshtein
-
+from SpacerPlacerHelpers.fetch_from_db import fetch_from_db_csv
 
 def reverse_complement(sequence):
     """Returns the reverse complement of a DNA sequence, handling ambiguous bases."""
@@ -115,8 +115,7 @@ def remap_and_generate_outputs(data, grouped_data, fasta_output, csv_output):
             header_parts = [
                 rows[0]['Accession Number'],
                 rows[0]['Start'],
-                rows[0]['End'],
-                rows[0]['Category']
+                rows[0]['End']
             ]
             header = ".".join(header_parts)
 
@@ -162,8 +161,8 @@ def fasta_to_csv(fasta_file_path, output_csv_path):
                 current_header = line[1:]  # Remove the '>'
                 parts = current_header.split("_-_")
 
-                if len(parts) == 6:
-                    accession_number, start, end, category, cas_gene, spacer_index = parts
+                if len(parts) == 7:
+                    accession_number, start, end, category, cas_gene, consensus, spacer_index = parts
                 else:
                     raise ValueError(f"Invalid FASTA header format: {current_header}")
             else:
@@ -175,7 +174,8 @@ def fasta_to_csv(fasta_file_path, output_csv_path):
                     "Start": start,
                     "End": end,
                     "Category": category,
-                    "Cas-Gene": cas_gene
+                    "Cas-Gene": cas_gene,
+                    "Consensus": consensus
                 })
 
     # Write to CSV
@@ -187,33 +187,70 @@ def fasta_to_csv(fasta_file_path, output_csv_path):
             "Start",
             "End",
             "Category",
-            "Cas-Gene"
+            "Cas-Gene",
+            "Consensus",
         ])
 
         writer.writeheader()
         writer.writerows(rows)
-8
 
 
-
-def process_csv_to_fasta(input_csv, fasta_output, csv_output, clustering=True):
-    """Main function to process the CSV, optionally cluster sequences, and generate outputs.
+def process_csv_to_fasta(input_csv, fasta_output, csv_output, clustering=True, use_database=False):
+    """Main function to process the CSV, optionally enrich data from the database, cluster sequences, and generate outputs.
 
     Args:
         input_csv (str): Path to the input CSV file.
         fasta_output (str): Path to the output FASTA file.
         csv_output (str): Path to the output CSV file.
         clustering (bool): If True, perform complex clustering; otherwise, group identical sequences.
+        use_database (bool): If True, fetch data from the database for enrichment.
     """
     # Step 1: Read CSV
     with open(input_csv, mode='r') as infile:
         csv_reader = csv.DictReader(infile)
         data = list(csv_reader)
 
-    # Step 2: Extract spacer sequences
+    if not data:
+        print("Input CSV is empty.")
+        return
+
+    # Check if the first row contains the required keys
+    required_keys = {'Cas-Gene', 'Consensus', 'Spacer Sequence'}
+    if not required_keys.issubset(data[0].keys()):
+        print("Input CSV is missing required columns: 'Cas-Gene', 'Consensus', or 'Spacer Sequence'.")
+        return
+
+    # Step 2: Fetch additional data from the database using the first row
+    if use_database:
+        first_row = data[0]
+        cas_type = first_row['Cas-Gene']  # Assuming column name is "Cas-Gene"
+        consensus_repeat = first_row['Consensus']  # Assuming column name is "Consensus"
+        db_entries = fetch_from_db_csv(cas_type, consensus_repeat)
+
+        # Check the number of entries fetched
+        if len(db_entries) > 1000:
+            print("Fetched data exceeds 1000 rows. Using original data only.")
+        else:
+            # Append fetched entries to the data
+            for db_entry in db_entries:
+                db_entry['Cas-Gene'] = cas_type
+                db_entry['Consensus'] = consensus_repeat
+                data.append(db_entry)
+
+    # Step 3: Remove duplicate rows
+    unique_data = []
+    seen = set()
+    for row in data:
+        row_tuple = tuple(row.items())  # Convert the row to a hashable type
+        if row_tuple not in seen:
+            seen.add(row_tuple)
+            unique_data.append(row)
+    data = unique_data
+
+    # Step 4: Extract spacer sequences
     spacer_sequences = [row['Spacer Sequence'] for row in data]
 
-    # Step 3: Assign clusters based on the clustering flag
+    # Step 5: Assign clusters based on the clustering flag
     if clustering:
         # Perform complex clustering (edit distance of 0 or 1)
         clusters = cluster_sequences(spacer_sequences)
@@ -223,14 +260,14 @@ def process_csv_to_fasta(input_csv, fasta_output, csv_output, clustering=True):
         unique_sequences = list(set(spacer_sequences))
         sequence_to_cluster = {seq: idx for idx, seq in enumerate(unique_sequences, start=1)}
 
-    # Step 4: Add Cluster column to the data
+    # Step 6: Add Cluster column to the data
     for row in data:
         row['Cluster'] = sequence_to_cluster[row['Spacer Sequence']]
 
-    # Step 5: Group data by 'Start'
+    # Step 7: Group data by 'Start'
     grouped_data = group_data_by_start(data)
 
-    # Step 6: Remap clusters and write FASTA/CSV outputs
+    # Step 8: Remap clusters and write FASTA/CSV outputs
     remap_and_generate_outputs(data, grouped_data, fasta_output, csv_output)
 
     print(f"Process completed. Outputs saved to {fasta_output} and {csv_output}")
