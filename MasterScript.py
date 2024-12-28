@@ -174,6 +174,7 @@ def run_spacer_placer(args):
                            folder_output_sp)
 
 
+
 def main():
     args = parse_arguments()
     main_path = str(pathlib.Path(__file__).parent.absolute())
