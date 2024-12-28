@@ -91,6 +91,7 @@ def parse_arguments():
     parser.add_argument(
         '--flag_use_db_sp',
         action='store_true',
+        default=False,
         help="Flag to use the database for Spacer Placer."
     )
 
@@ -104,6 +105,7 @@ def parse_arguments():
     parser.add_argument(
         '--flag_cluster_similar_sp',
         action='store_true',
+        default=False,
         help="Flag to cluster similar spacer sequences."
     )
 
